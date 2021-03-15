@@ -11,16 +11,17 @@ namespace EcomApi.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        [Route("[Home/Test]")]
         public ActionResult Index()
         {
             ProductsController products = new ProductsController();
 
+            var Product = new List<Product>()
+            {
+            };
+
             // ViewBag enables sharing of values dynamically between the Controller and View
             ViewBag.Name = "JohnDoe";
-            ViewBag.Product1 = products.Get(1);
-            // ViewBag.Products = products.Get();
-
+            //ViewBag.Product1 = products.Get(1);
             // View() returns the name of the action method which is the index, "ActionResult Index()"
             return View();
         }
@@ -33,7 +34,6 @@ namespace EcomApi.Controllers
         }
 
         // GET: Home/Test
-        [Route("[Product]")]
         public ActionResult TestProduct()
         {
             // View() returns the name of the action method which is the index, "ActionResult Index()"

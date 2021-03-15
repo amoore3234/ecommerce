@@ -1,4 +1,5 @@
-﻿@model EcomApi.Models.Product
+﻿@*@model EcomApi.Models.Product*@
+@model 
 
 @{
     ViewBag.Title = "Index";
@@ -14,6 +15,14 @@
     
     <div class="form-horizontal">
         <h4>Product</h4>
+
+        @*@foreach (var book in Model.)  
+        {  
+            <li>
+                @Html.DisplayFor(modelItem => item.Locations.LocationName)
+            </li>  
+        }*@  
+
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">

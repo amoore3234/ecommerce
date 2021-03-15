@@ -225,6 +225,8 @@
     <Content Include="Views\Products\Products.cshtml" />
     <Content Include="Views\Home\Test.cshtml" />
     <Content Include="Views\TestTest\Index.cshtml" />
+    <Content Include="Views\TestTest\Details.cshtml" />
+    <Content Include="Views\TestTest\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Cart\" />

@@ -13,36 +13,32 @@ namespace EcomApi.Controllers
 {
     public class ProductsController : ApiController
     {
-        public ActionResult Products()
-        {
-            return View();
-        }
-
-        private ActionResult View()
-        {
-            throw new NotImplementedException();
-        }
-
         OnlineStoreEntities db = new OnlineStoreEntities();
 
-        // GET api/Products
-        public string Get()
+        // GET Api/Products
+        public IEnumerable<string> Get()
         {
-            var x = db.Products.ToList();
-
-                               
-            if (x == null)
-            {
-                return "no data found";
-
-            }
-            else
-            {
-                return JsonConvert.SerializeObject(x);
-
-            }
-
+            return new string[] { "value1", "value2" };
         }
+
+        //// GET api/Products
+        //public string Get()
+        //{
+        //    var x = db.Products.ToList();
+
+
+        //    if (x == null)
+        //    {
+        //        return "no data found";
+
+        //    }
+        //    else
+        //    {
+        //        return JsonConvert.SerializeObject(x);
+
+        //    }
+
+        //}
 
         // GET api/Products/5
         public string Get(int id)
