@@ -26,7 +26,6 @@ namespace EcomApi.Controllers
             else
             {
                 return JsonConvert.SerializeObject(x);
-
             }
 
         }
@@ -43,6 +42,7 @@ namespace EcomApi.Controllers
             }
             else
             {
+
                 return JsonConvert.SerializeObject(category);
 
             }

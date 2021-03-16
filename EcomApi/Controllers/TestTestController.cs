@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EcomApi.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,11 +9,22 @@ namespace EcomApi.Controllers
 {
     public class TestTestController : Controller
     {
+        OnlineStoreEntities db = new OnlineStoreEntities();
+
         // /TestTest or /TestTest/Index won't work if you remove Index() method
         // GET: /TestTest or /TestTest/Index
         public ActionResult Index()
         {
             return View();
+        }
+
+        [HttpGet]
+        public ActionResult GetList()
+        {
+            //var model = (from item in db.Products select item).ToList();
+            var model = new Product();
+            //model.ProductName = db.GetList(1);
+            return View(db.Products);
         }
 
         // GET: TestTest/Details/5

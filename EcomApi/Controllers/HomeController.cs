@@ -7,7 +7,6 @@ using System.Web.Mvc;
 
 namespace EcomApi.Controllers
 {
-
     public class HomeController : Controller
     {
         // GET: Home

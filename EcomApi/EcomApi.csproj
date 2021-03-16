@@ -227,10 +227,12 @@
     <Content Include="Views\TestTest\Index.cshtml" />
     <Content Include="Views\TestTest\Details.cshtml" />
     <Content Include="Views\TestTest\Create.cshtml" />
+    <Content Include="Views\TestTest\GetList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Cart\" />
     <Folder Include="Views\Customer\" />
+    <Folder Include="Views\Test\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
