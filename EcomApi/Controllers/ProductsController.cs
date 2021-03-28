@@ -23,43 +23,67 @@ namespace EcomApi.Controllers
             throw new NotImplementedException();
         }
 
-        OnlineStoreEntities db = new OnlineStoreEntities();
+        //OnlineStoreEntities db = new OnlineStoreEntities();
 
-        // GET api/Products
-        public string Get()
-        {
-            var x = db.Products.ToList();
 
+
+        //// GET api/Products
+        //public string Get()
+        //{
+        //    //var x = db.Products.ToList();
+        //    var x = db.Products;
                                
-            if (x == null)
-            {
-                return "no data found";
+        //    if (x == null)
+        //    {
+        //        return "no data found";
 
-            }
-            else
-            {
-                return JsonConvert.SerializeObject(x);
+        //    }
+        //    else
+        //    {
+        //        return JsonConvert.SerializeObject(x);
 
-            }
+        //    }
 
-        }
+        //}
 
-        // GET api/Products/5
-        public string Get(int id)
+        //// GET api/Products/5
+        //public string Get(int id)
+        //{
+        //    //var category = db.Products.Where(d => d.ProductId == id).FirstOrDefault();
+        //    var category = db.Products.Where(d => d.ProductId == id);
+
+        //    if (category == null)
+        //    {
+        //        return "no data found";
+
+        //    }
+        //    else
+        //    {
+        //        return JsonConvert.SerializeObject(category);
+
+        //    }
+        //}
+
+        [System.Web.Http.HttpGet]
+        public IHttpActionResult GetAllProducts()
         {
-            var category = db.Products.Where(d => d.ProductId == id).FirstOrDefault();
-
-            if (category == null)
+            IList<Product> products = null;
+            using (var x = new Model1DBContext())
             {
-                return "no data found";
-
+                products = x.Products.Select(p => new ProductViewModel()
+                {
+                    Id = p.ID,
+                    ProductName = p.ProductName,
+                    ProductDescription = p.ProductDescription,
+                    Price = (int)p.Price,
+                    Featured = p.Featured
+                }).ToList<ProductViewModel>();
             }
-            else
-            {
-                return JsonConvert.SerializeObject(category);
 
-            }
+            if (products.Count == 0)
+                return NotFound();
+
+            return Ok(products);
+
         }
-
-    }
 }

@@ -194,6 +194,10 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Content Include="OnlineStore.mdf" />
+    <Content Include="OnlineStore_log.ldf">
+      <DependentUpon>OnlineStore.mdf</DependentUpon>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="Models\Model1.edmx">
@@ -225,6 +229,7 @@
     <Content Include="Views\Products\Products.cshtml" />
     <Content Include="Views\Home\Test.cshtml" />
     <Content Include="Views\TestTest\Index.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Cart\" />

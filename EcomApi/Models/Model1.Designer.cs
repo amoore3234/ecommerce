@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\abrar\OneDrive\Documents\EcomApi\EcomApi\Models\Model1.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\mich\Documents\GitHub\ecommerce\ecommerce\EcomApi\Models\Model1.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
